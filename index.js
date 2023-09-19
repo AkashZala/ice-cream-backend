@@ -54,14 +54,15 @@ const startup = async () => {
       DROP TABLE IF EXISTS flavors;
       CREATE TABLE flavors(
         id SERIAL PRIMARY KEY,
-        name VARCHAR(25)
+        name VARCHAR(25),
+        favorite BOOLEAN
       );
       INSERT INTO flavors (name) VALUES ('Vanilla');
-      INSERT INTO flavors (name) VALUES ('Strawberry');
+      INSERT INTO flavors (name, favorite) VALUES ('Strawberry', true);
       INSERT INTO flavors (name) VALUES ('Chocolate');
       INSERT INTO flavors (name) VALUES ('Mint Chocolate Chip');
       INSERT INTO flavors (name) VALUES ('Mango');
-      INSERT INTO flavors (name) VALUES ('Cookies and Cream');
+      INSERT INTO flavors (name, favorite) VALUES ('Cookies and Cream', true);
     `;
 
     await client.query(SQL);
