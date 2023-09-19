@@ -59,6 +59,9 @@ const startup = async () => {
       INSERT INTO flavors (name) VALUES ('Vanilla');
       INSERT INTO flavors (name) VALUES ('Strawberry');
       INSERT INTO flavors (name) VALUES ('Chocolate');
+      INSERT INTO flavors (name) VALUES ('Mint Chocolate Chip');
+      INSERT INTO flavors (name) VALUES ('Mango');
+      INSERT INTO flavors (name) VALUES ('Cookies and Cream');
     `;
 
     await client.query(SQL);
